@@ -10,8 +10,8 @@ export default {
   plugins: [
     babel({
       babelrc: false,
-      presets: ['stage-3', ['env', { modules: false, targets: { browsers: ['last 2 versions', 'IE >= 10'] } }]],
-      plugins: ['transform-runtime'],
+      presets: [['@babel/preset-env', { modules: false, targets: { browsers: ['last 2 versions', 'IE >= 10'] } }]],
+      plugins: ['@babel/transform-runtime'],
       runtimeHelpers: true,
     }),
     cleanup({ maxEmptyLines: 1 }),
